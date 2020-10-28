@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captainshield</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="outer">
+            <div class="inner">
+                <div class="star">
+
+                </div>
+            </div>
+        </div>
+        <div class="glow">
+
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+    }
+
+    .container{
+height:280px;
+width: 280px;
+border-radius:50%;
+box-shadow:10px 10px 1 rgba(0,0 , 0.7);
+position:absolute;
+background-color:green;
+left:30%;
+top:30%;
+transition:translate(-50%,-50%);
+overflow:hidden;
+    }
+.outer{
+height:250px;
+width:250px;
+background-color:white;
+position:absolute;
+border-radius:50%;
+left:0;
+top:0;
+transition:translate(-50%,-50%);
+border:15px solid #E53935;
+animation:4s out ;
+animation-iteration-count: 3;
+
+}
+.inner{
+height:150px;
+width:150px;
+background-color:#01579b;
+position:absolute;
+border-radius:50%;
+border:15px solid #E53935;
+left:14%;
+top:14%;
+animation:4s in ;
+animation-iteration-count: 3;
+}
+.star{
+    height:150px;
+width:150px;
+position:absolute;
+background-color: white;
+clip-path:polygon(50% 0%,61% 35%, 95% 35%, 68% 57%, 79% 91%, 50% 70%,
+25% 91% ,32% 57% ,2% 35% ,39% 35%);
+animation:4s stark ;
+animation-iteration-count: 3;
+
+}
+.glow{
+height:250px;
+width:250px;
+background-color:white;
+opacity:0.4;
+top:50%;
+left:50%;
+clip-path:polygon(0% 10%,57% 0%,57% 70%,0% 100% );
+
+}
+@keyframes out{
+from{
+transform: rotate(0);
+}
+to{
+    transform:rotate(360deg);
+}
+}
+@keyframes in{
+from{
+transform: rotate(0);
+}
+to{
+    transform:rotate(360deg);
+}
+}
+@keyframes stark{
+from{
+transform:scale(4);
+}
+to{
+    transform:scale(1);
+}
+}
+</style>
+
+</html>

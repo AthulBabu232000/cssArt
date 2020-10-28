@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smily</title>
+</head>
+
+<body>
+    <div class="smily">
+        <div class="eyes"></div>
+        <div class="lips"></div>
+    </div>
+</body>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .smily{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        width:200px;
+        height:200px;
+        background-color:#fcf96b;
+        border-radius:50%;
+        border:2px solid brown;
+
+    }
+    .eyes:before{
+        content:' ';
+        position: absolute;
+        background-color: brown;
+        top:30%;
+        left:25%;
+        border:2px solid brown;
+        border-radius:50%;
+        height:6px;
+        width:6px;
+    }
+    .eyes:after{
+        content:' ';
+        position: absolute;
+        background-color: brown;
+        top:30%;
+        right:25%;
+        border:2px solid brown;
+        border-radius:50%;
+        height:6px;
+        width:6px;
+        transition:all 0.5s;
+
+    }
+    .lips{
+        position:absolute;
+        height:100px;
+        width:100px;
+        border:6px solid transparent;
+        left:50%;
+        top:18%;
+        border-bottom:6px solid brown;
+        transform:translateX(-50%);
+    }
+
+    .smily:hover .eyes:before{
+        height:10px;
+        width:8px;
+    }
+
+    .smily:hover .eyes:after{
+        height:10px;
+        width:8px;
+    }
+
+    .smily:hover .lips{
+        border-radius:50%;
+        width:120px;
+    }
+
+</style>
+
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star</title>
+</head>
+
+<body>
+    <div id="star" class="star"></div>
+    <div id="star2" class="star"></div>
+    <div id="star3" class="star"></div>
+    <div id="st" class="star"></div>
+    <div id="star5" class="star"></div>
+    <div id="star6" class="star"></div>
+    <div id="star7" class="star"></div>
+    <div id="star8" class="star"></div>
+    <div id="star9" class="star"></div>
+
+</body>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color:black;
+    }
+
+    
+    
+
+
+    .star {
+        position: absolute;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 80px solid aquamarine;
+        top: 50%;
+        left: 50%;
+        box-shadow: 6 6 #000;
+    }
+
+    .star:after {
+        content: '';
+        position: absolute;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 80px solid aquamarine;
+        transform: rotate(180deg);
+        margin: 30px 0 0 -50px;
+    }
+
+    #star {
+        animation-name: anime;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    #star:after {
+
+        animation-name: anime2;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    #star2 {
+        animation-name: ani;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    #star2:after {
+        animation-name: ani2;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    #star3 {
+        animation-name: anime3;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    #star3:after {
+        animation-name: anime4;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+
+    
+    #star5 {
+        animation-name: anime7;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    #star5:after {
+        animation-name: anime8;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+    #star6 {
+        animation-name: anime9;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    #star6:after {
+        animation-name: anime10;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+    #star7 {
+        animation-name: ani3;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    #star7:after {
+        animation-name: ani4;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+    #star8 {
+        animation-name: anime13;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    #star8:after {
+        animation-name: anime14;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+    #star9 {
+        animation-name: anime15;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    #star9:after {
+        animation-name: anime16;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes anime {
+        from {
+            transform: translateY(-500%);
+            border-bottom-color: rgb(241, 38, 11);
+
+        }
+
+        to {
+            transform: translateY(0);
+            border-bottom-color: aquamarine;
+        }
+    }
+
+    @keyframes anime2 {
+        from {
+            border-bottom-color: red;
+
+        }
+
+        to {
+            border-bottom-color: aquamarine;
+
+        }
+    }
+
+    @keyframes anime3 {
+        from {
+            transform: translate(-400%, -500%);
+            border-bottom-color: indigo;
+
+        }
+
+        to {
+            transform: translateY(400%, 400%);
+            border-bottom-color: aquamarine;
+        }
+    }
+
+    @keyframes anime4 {
+        from {
+
+            border-bottom-color: indigo;
+
+        }
+
+        to {
+
+            border-bottom-color: aquamarine;
+        }
+    }
+
+  
+
+
+    @keyframes anime7 {
+        from {
+            transform: translate(400%, -500%);
+            border-bottom-color: rgb(7, 223, 7);
+
+        }
+
+        to {
+            transform: translateY(400%, 400%);
+            border-bottom-color: aquamarine;
+        }
+    }
+
+    @keyframes anime8 {
+        from {
+
+            border-bottom-color:  rgb(7, 223, 7);
+
+        }
+
+        to {
+
+            border-bottom-color: aquamarine;
+        }
+    }
+
+    @keyframes anime9 {
+        from {
+            transform: translate(400%, 500%);
+            border-bottom-color: orange;
+
+        }
+
+        to {
+            transform: translateY(-400%, -400%);
+            border-bottom-color: aquamarine;
+        }
+    }
+
+    @keyframes anime10 {
+        from {
+
+            border-bottom-color: orange;
+
+        }
+
+        to {
+
+            border-bottom-color: aquamarine;
+        }
+    }
+
+    @keyframes anime13 {
+        from {
+            transform: translate(-400%,500%);
+            border-bottom-color: yellow;
+
+        }
+
+        to {
+            transform: translate(0%,0%);
+            border-bottom-color: aquamarine;
+        }
+    }
+
+    @keyframes anime14 {
+        from {
+
+            border-bottom-color: yellow;
+
+        }
+
+        to {
+
+            border-bottom-color: aquamarine;
+        }
+    }
+    @keyframes anime15 {
+        from {
+            transform: translateY(500%);
+            border-bottom-color: rgb(218, 8, 130);
+
+        }
+
+        to {
+            transform: translateY(0%);
+            border-bottom-color: aquamarine;
+        }
+    }
+
+    @keyframes anime16 {
+        from {
+
+            border-bottom-color: rgb(218, 8, 130);
+
+        }
+
+        to {
+
+            border-bottom-color: aquamarine;
+        }
+    }
+
+
+
+
+    @keyframes ani {
+        from {
+            transform: translateX(-400%);
+            border-bottom-color: black;
+
+        }
+
+        to {
+            transform: translateX(0%);
+            border-bottom-color: aquamarine;
+        }
+    }
+
+    @keyframes ani2 {
+        from {
+            border-bottom-color: black;
+        }
+
+        to {
+            border-bottom-color: aquamarine;
+        }
+    }
+    @keyframes ani3 {
+        from {
+            transform: translateX(400%);
+            border-bottom-color: black;
+
+        }
+
+        to {
+            transform: translateX(0%);
+            border-bottom-color: aquamarine;
+        }
+    }
+
+    @keyframes ani4{
+        from {
+            border-bottom-color: black;
+        }
+
+        to {
+            border-bottom-color: aquamarine;
+        }
+    }
+</style>
+
+</html>

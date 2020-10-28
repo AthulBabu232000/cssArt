@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation card</title>
+
+</head>
+
+<body>
+    <section class="card">
+        <div class="image">ATHUL BABU</div>
+        <div class="detail">
+
+          <p>  this is an amzing opportunity for another number of categorises for the nationalites for the development of
+            the country and many people are actually waiting for my videos</p>
+        </div>
+    </section>
+    <section class="card">
+        <div class="image">ATHUL BABU</div>
+
+        <div class="detail">
+
+          <p>  this is an amazing opportunity for another number of categorises for the nationalites for the development of
+            the country and many people are actually waiting for my videos</p>
+        </div>
+    </section>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .card {
+        height: 200px;
+        position: relative;
+        width: auto;
+
+    }
+
+    .card img {
+        float: left;
+    }
+
+    .card .detail {
+        float: left;
+        height: 200px;
+        width: 0px;
+        background-color: blue;
+        padding: 0px;
+        text-align: center;
+        color: white;
+        border-radius: 10px;
+        transition: 1s;
+    }
+
+    .card:hover .detail {
+        width: 400px;
+        padding: 15px;
+
+    }
+</style>
+
+</html>

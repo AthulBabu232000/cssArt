@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spooky</title>
+</head>
+<body>
+    <div class="container">
+        <div class="spooky">
+            <div class="body">
+                <div class="eyes"></div>
+                <div class="mouth"></div>
+                <div class="feet">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+</body>
+<style>
+    body{
+        overflow: hidden;
+        height:100vh;
+        width:100vw;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        margin:0;
+        background:#424f6f;
+    }
+    .container{
+        height:400px;
+        width:400px;
+        padding:0;
+        box-sizing:border-box;
+    }
+    .spooky{
+        margin:10% auto;
+        width:80%;
+        height:80%;
+        animation:floaty .2s infinite;
+    }
+    .spooky .body{
+        position:relative;
+        margin:50px auto 0;
+        width:180px;
+        height:220px;
+        background:#f2fbf1;
+        border-top-left-radius:90px;
+        border-top-right-radius:90px;
+    }
+    .spooky .body:before,.spooky .body:after{
+        content:'';
+        position:absolute;
+        top:130px;
+        display: inline-block;
+        width:36px;
+        height:36px;
+        border-radius:50%;
+        animation:floaty .2s infinite;
+        background-color: white;
+    }
+    .spooky .body:before{
+        left:-18px;
+
+    }
+    .spooky .body:after{
+        right:-18px;
+    }
+    .spooky .body .eyes:before,.spooky .body .eyes:after{
+        content:'';
+        display:block;
+        width:30px;
+        height:30px;
+        border-radius:50%;
+        background-color:#252c49;
+
+    }
+    .spooky .body .eyes{
+        display: flex;
+        justify-content: space-between;
+        margin:0 auto;
+        width:90px;
+        height:20px;
+        padding:90px 0 0 ;
+    }
+    .spooky .body .mouth:before{
+        content:'';
+        display: block;
+        background-color:white;
+        width:10px;
+        height: 10px;
+        margin-left:20px;
+        border-bottom-right-radius:50%;
+        border-bottom-left-radius:50%;
+
+    }
+    .spooky .body .mouth:after{
+        content:'';
+        display: block;
+        background-color:white;
+        width:10px;
+        height: 10px;
+        margin-left:35px;
+        margin-top:-10px;
+        border-bottom-right-radius:50%;
+        border-bottom-left-radius:50%;
+
+    }
+    .spooky .body .mouth{
+        
+       width:60px;
+       height:30px;
+       margin:25px auto;
+       background-color:#252c49;
+       border-bottom-left-radius:50%;
+       border-bottom-right-radius:50%;
+
+    }
+    .spooky .body .feet::after,.spooky .body .feet::before,
+    .spooky .body .feet > *{
+        content:'';
+        width:36px;
+        height:36px;
+        background-color:white;
+        border-radius:50%;
+
+    }
+    .spooky .body .feet{
+       position:absolute;
+       display:flex;
+       height: 36px;
+       bottom:-18px;
+
+    }
+     .shadow{
+         margin:-90px auto 0;
+         background:black;
+         animation:zoomy .2s infinite;
+         width:180px;
+         height: 40px;
+         border-radius:50%;
+     } 
+
+   
+   @keyframes floaty{
+       0% ,100%{
+           transform:translateY(0);
+       }
+       50%{
+           transform:translateY(-20px);
+       }
+   }
+
+   @keyframes zoomy{
+       0%,100%{
+           transform:scale(1);
+       }
+       50%{
+           transform:scale(0.8);
+       }
+   }
+</style>
+</html>

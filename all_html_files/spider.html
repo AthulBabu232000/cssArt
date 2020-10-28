@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spider</title>
+</head>
+
+<body>
+    <div class="spider">
+        <div class="spiderweb"></div>
+        <div class="body">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="legs left">
+                <div class="leg"></div>
+                <div class="leg"></div>
+                <div class="leg"></div>
+            </div>
+            <div class="legs right">
+                <div class="leg"></div>
+                <div class="leg"></div>
+                <div class="leg"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+</body>
+<style>
+    html {
+        background: url('https://wallpapercave.com/wp/BplqHh5.jpg');
+         background-repeat: no-repeat;
+         background-position-x: center;
+    }
+
+
+    html:hover .spider {
+        top: -120%;
+    }
+
+    .spiderweb {
+        background: white;
+        width: 2px;
+        height: 250px;
+        margin-left: 49px;
+    }
+
+    .spider {
+        position: absolute;
+        display: inline-block;
+        top: 0%;
+        left: 44%;
+        animation: swing 2s infinite;
+        transform-origin: top;
+        transition: 1s ease-in-out;
+    }
+
+    .spider .body {
+        width: 100px;
+        height: 80px;
+        background: #000;
+        position: relative;
+        border-radius: 50%;
+        
+    }
+
+    .spider .body .eye {
+        width: 27px;
+        height: 27px;
+        top: 20%;
+        background: #fff;
+        position: absolute;
+        border-radius: 50%;
+       
+
+
+    }
+
+    .spider .body .mouth{
+        width: 20px;
+        height: 3px;
+        top: 75%;
+        left:37%;
+        background: #fff;
+        position: absolute;
+        border-radius: 40%;
+        border:0.5px solid;
+       
+    }
+  
+    .spider .eye.right {
+        right: 16px;
+    }
+
+    .spider .eye.left {
+        left: 16px;
+    }
+
+    .spider .eye::after {
+        background: #000;
+        width: 7px;
+        height: 7px;
+        content: '';
+        display: block;
+        position: absolute;
+        margin: 55%;
+        border-radius: 50%;
+        animation: look 4s infinite;
+    }
+
+    .spider .legs {
+        position: absolute;
+        bottom: -10%;
+        z-index: -1;
+
+    }
+
+    .spider .legs .leg {
+        width: 80px;
+        height: 40px;
+        margin-top: -27px;
+        border: 5px solid transparent;
+        border-top-color: #000;
+        border-radius: 40px 40px 0 0;
+    }
+
+    .spider .legs.left {
+        left: -60%;
+    }
+
+    .spider .legs.right {
+        right: -58%;
+    }
+
+    .legs.left .leg:nth-child(1) {
+        transform: rotate(10deg);
+        margin-left: 10px;
+    }
+
+    .legs.left .leg:nth-child(2) {
+        transform: rotate(-20deg);
+        margin-left: 15px;
+    }
+
+    .legs.left .leg:nth-child(3) {
+        transform: rotate(-50deg);
+        margin-left: 30px;
+    }
+
+    .legs.right .leg:nth-child(1) {
+        transform: rotate(-10deg);
+        margin-left: 10px;
+    }
+
+    .legs.right .leg:nth-child(2) {
+        transform: rotate(20deg);
+        margin-left: 10px;
+    }
+
+    .legs.right .leg:nth-child(3) {
+        transform: rotate(50deg);
+        margin-right: 30px;
+    }
+
+    @keyframes look {
+
+        0%,
+        40%,
+        100% {
+            transform: translateX(0);
+        }
+
+        45%,
+        90% {
+            transform: translateX(-120%);
+        }
+    }
+
+    @keyframes swing {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10%);
+        }
+    }
+</style>
+
+</html>
