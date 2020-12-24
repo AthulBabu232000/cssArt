@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>flip</title>
+</head>
+<body>
+
+
+    <div class="container">
+
+
+  <div class="row mt-3 mx-auto">
+
+    <div class="col-11 mx-auto">
+        <div class="row mx-auto">
+
+      <div class="col-6 mx-auto">       
+        <div class="book-page">
+    
+            <div class="page-img">
+                <img src="https://images.unsplash.com/photo-1548048026-5a1a941d93d3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8bGlicmFyeXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="">
+                
+            </div>
+    
+            <div class="details">
+
+                <div class="row">
+                    <div class="col-12 col-sm-3">
+                        lorem
+                    </div>
+                    <div class="col-12 col-sm-3">
+
+                    </div>
+                </div>
+            </div>
+    
+            
+        </div></div>
+      <div class="col-6 mx-auto">       
+        <div class="book-page">
+    
+            <div class="page-img">
+                <img src="https://images.unsplash.com/photo-1548048026-5a1a941d93d3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8bGlicmFyeXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="">
+                
+            </div>
+    
+            <div class="details">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis accusantium nostrum hic repellendus? Natus et, dignissimos fuga corrupti quam nam consequuntur autem vero fugiat adipisci omnis placeat odio voluptatem debitis.</p>
+            </div>
+    
+            
+        </div></div>
+        </div>
+    </div>
+  </div>
+    </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+</body>
+
+<style>
+        body{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    .book-page{
+        width:40vmin;
+        height:40vmin;
+        position:absolute;
+        transform-style:preserve-3d;
+        transform:perspective(2000px);
+        box-shadow:inset 300px 0 50px rgba(0,0,0, .5)  0 20px 100px rgba(0,0,0,0.5);
+        background:#fff;
+        transition:2s;
+        box-shadow: 10px 10px 10px;
+        border-radius:12px;
+
+        
+
+
+    }
+
+    .book-page:hover{
+        transform:translate(10%, 10%) perspective(2000px) rotate(-10deg);
+        box-shadow:inset 20px 0 50px rgba(0,0,0, .5)  0 10px 100px rgba(0,0,0,0.5);
+
+
+
+    }
+
+    .page-img{
+        width:100%;
+        height:100%;
+        position:relative;
+        transform-origin:left;
+        transition:2s;
+        z-index:1;
+        border-radius:12px;
+    }
+
+    .page-img img{
+        width:100%;
+        height:100%;
+        border-radius:12px;
+    }
+
+    .book-page:hover .page-img{
+        transform:rotateY(-135deg);
+    }
+
+    .details{
+        position:absolute;
+        top:0vmin;
+        margin:5px;
+        padding:5px;
+    
+
+    }
+    .details .row p{
+        font-size:xx-small;
+    }
+</style>
+</html>

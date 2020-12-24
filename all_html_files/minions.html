@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minions</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="minion">
+            <div class="body">
+                <div class="l-band"></div>
+                <div class="r-band"></div>
+                <div class="l-outer-eye">
+                    <div class="l-inner-eye">
+                        <div class="l-eye-in">
+                            <div class="dark-eye-l"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="r-outer-eye">
+                    <div class="r-inner-eye">
+                        <div class="r-eye-in">
+                            <div class="dark-eye-r"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mouth">
+                    <div class="teeth">
+
+                    </div>
+                    <div class="teeth-1">
+
+                    </div>
+                    <div class="teeth-2">
+
+                    </div>
+                    <div class="teeth-3">
+
+                    </div>
+                    <div class="teeth-4">
+
+                    </div>
+
+                </div>
+                <div class="outfit">
+
+                    <div class="l-btn"></div>
+                    <div class="r-btn"></div>
+                    <div class="outfit-top">
+
+                    </div>
+                    <div class="strap-left"></div>
+                    <div class="strap-right"></div>
+
+                </div>
+            </div>
+            <div class="l-leg"></div>
+            <div class="r-leg"></div>
+            <div class="l-boot"></div>
+            <div class="r-boot"></div>
+            <div class="l-hand"><div class="l-glove">
+                <div class="f-1"></div>
+                <div class="f-2"></div>
+                <div class="f-3"></div>
+            </div></div>
+            <div class="r-hand"><div class="r-glove">
+                <div class="f-1"></div>
+                <div class="f-2"></div>
+                <div class="f-3"></div>
+            </div></div>
+
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .body {
+        height: 70vmin;
+        width: 50vmin;
+        background-color: #f7dc43;
+        border-radius: 50% 50% 45% 45% / 35% 35% 30% 30%;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .outfit {
+        width: 50vmin;
+        height: 20vmin;
+        background-color: #549fc6;
+        border-radius: 0% 0% 50% 50% / 0% 0% 50% 50%;
+        bottom: 0vmin;
+        position: absolute;
+
+    }
+
+    .outfit-top {
+        width: 30vmin;
+        height: 30vmin;
+        background-color: #549fc6;
+        position: absolute;
+        bottom: -2vmin;
+        left: 10vmin;
+
+
+    }
+
+    .strap-left {
+        width: 30vmin;
+        height: 4vmin;
+        background-color: #549fc6;
+        bottom: 33vmin;
+        position: absolute;
+        transform: rotate(40deg);
+        left: -15vmin;
+    }
+
+    .strap-right {
+        width: 30vmin;
+        height: 4vmin;
+        background-color: #549fc6;
+        position: absolute;
+        bottom: 33vmin;
+        right: -15vmin;
+        transform: rotate(-40deg);
+
+    }
+
+    .l-outer-eye {
+        height: 20vmin;
+        width: 20vmin;
+        background-color: #9c9c95;
+        border-radius: 50%;
+        position: absolute;
+        left: 5vmin;
+        top: 10vmin;
+
+    }
+
+    .r-outer-eye {
+
+        height: 20vmin;
+        width: 20vmin;
+        background-color: #9c9c95;
+        border-radius: 50%;
+        position: absolute;
+        top: 10vmin;
+        right: 5vmin;
+
+    }
+
+    .l-inner-eye {
+        height: 15vmin;
+        width: 15vmin;
+        border-radius: 50%;
+        background-color: #fcf8f5;
+        left: 2.5vmin;
+        top: 2.5vmin;
+        position: absolute;
+    }
+
+    .r-inner-eye {
+        height: 15vmin;
+        width: 15vmin;
+        border-radius: 50%;
+        background-color: #fcf8f5;
+        left: 2.5vmin;
+        top: 2.5vmin;
+        position: absolute;
+    }
+
+    .l-eye-in {
+        height: 7vmin;
+        width: 7vmin;
+        background-color: #6f4245;
+        border-radius: 50%;
+        position: absolute;
+        left: 4vmin;
+        top: 4vmin;
+        border: 0.1vmin solid black;
+    }
+
+    .r-eye-in {
+        height: 7vmin;
+        width: 7vmin;
+        background-color: #6f4245;
+        border-radius: 50%;
+        right: 4vmin;
+        position: absolute;
+        top: 4vmin;
+        border: 0.1vmin solid black;
+
+    }
+
+    .dark-eye-l {
+
+        width: 1.5vmin;
+        height: 1.5vmin;
+        border-radius: 50%;
+        background-color: rgb(32, 11, 11);
+        border-radius: 50%;
+        position: absolute;
+        left: 2.55vmin;
+        top: 2.55vmin;
+        border: .2vmin solid black;
+    }
+
+    .dark-eye-r {
+
+        width: 1.5vmin;
+        height: 1.5vmin;
+        border-radius: 50%;
+        background-color: rgb(32, 11, 11);
+        border-radius: 50%;
+        position: absolute;
+        left: 2.55vmin;
+        top: 2.55vmin;
+        border: .2vmin solid black;
+    }
+
+    .l-band {
+        width: 10vmin;
+        height: 5vmin;
+        background-color: black;
+        position: absolute;
+        top: 17vmin;
+
+    }
+
+    .r-band {
+        width: 10vmin;
+        height: 5vmin;
+        background-color: black;
+        position: absolute;
+        top: 17vmin;
+        right: 0;
+    }
+
+    .mouth {
+        height: 5vmin;
+        width: 15vmin;
+        position: absolute;
+        background-color: black;
+        top: 33vmin;
+        border-radius: 0% 0% 54% 48% / 0% 0% 94% 95%;
+        left: 17vmin;
+        overflow:hidden;
+    }
+    .teeth{
+        position:absolute;
+        height:4vmin;
+        width:3.5vmin;
+        background-color:white;
+        border-radius:0% 0% 37% 34% / 0% 76% 57% 45% ;
+        left:1.2vmin;
+        top:-2vmin;
+    }
+    .teeth-1{
+        position:absolute;
+        height:4vmin;
+        width:3.5vmin;
+        background-color:white;
+        border-radius:0% 0% 37% 34% / 0% 76% 57% 45% ;
+        left:4.5vmin;
+        top:-2vmin;
+    }
+    .teeth-2{
+        position:absolute;
+        height:4vmin;
+        width:3.5vmin;
+        background-color:white;
+        border-radius:0% 0% 37% 34% / 0% 76% 57% 45% ;
+        left:7.5vmin;
+        top:-2vmin;
+    }
+    .teeth-3{
+        position:absolute;
+        height:4vmin;
+        width:3.5vmin;
+        background-color:white;
+        border-radius:0% 0% 37% 34% / 0% 76% 57% 45% ;
+        left:10.5vmin;
+        top:-2vmin;
+    }
+    .l-btn{
+        background-color:rgb(1, 2, 22);
+        height:5vmin;
+        width:5vmin;
+        border-radius:50%;
+        left:10vmin;
+        position:absolute;
+        z-index:100;
+        top:-7vmin;
+        opacity:0.7;
+    }
+    .r-btn{
+        
+        background-color:rgb(1, 2, 22);
+        height:5vmin;
+        width:5vmin;
+        border-radius:50%;
+        right:10vmin;
+        position:absolute;
+        z-index:100;
+        top:-7vmin;
+        opacity:0.7;
+    
+    }
+    .l-leg{
+        width:10vmin;
+        height:10vmin;
+        background-color:#549fc6;
+        left:13vmin;
+        position:relative;
+        bottom:4vmin;
+        z-index:100;
+    }
+    .r-leg{
+        width:10vmin;
+        height:10vmin;
+        background-color:#549fc6;
+        left:28vmin;
+        position:relative;
+        bottom:14vmin;
+        z-index:100;
+    }
+    .minion{
+        
+        top:35vmin;
+        position:relative;
+
+    }
+    .l-boot{
+        width:12.5vmin;
+        height:8vmin;
+        background-color:black;
+        border-radius:88% 12% 70% 30% / 71% 71% 29% 29%  ;
+        bottom:16vmin;
+        position:relative;
+        left:11vmin;
+    }
+    .r-boot{
+        width:12.5vmin;
+        height:8vmin;
+        background-color:black;
+        border-radius: 88% 12% 70% 30% / 71% 71% 29% 29%  ;
+        bottom:24vmin;
+        position:relative;
+        left:28vmin;
+        transform:rotateY(180deg);
+    }
+    .l-hand{
+        width:6vmin;
+        height:20vmin;
+        background-color:#f7dc43;
+        left:-5vmin;
+        position:relative;
+        bottom:70vmin;
+        transform:rotate(25deg);
+        z-index:-100;
+        border-top-left-radius: 50%;
+    }
+    .r-hand{
+        width:6vmin;
+        height:20vmin;
+        background-color:#f7dc43;
+        left:49vmin;
+        position:relative;
+        bottom:90vmin;
+        transform:rotate(-25deg);
+        z-index:-100;
+        border-top-right-radius: 50%;
+
+    }
+    .l-glove{
+        width:7vmin;
+        height:5vmin;
+        position:absolute;
+        background-color:#000;
+       bottom:0;
+       right:0vmin;
+       left:-0.5vmin;
+       border-top-left-radius: 30%;
+       border-top-right-radius: 30%;
+
+    }
+    .r-glove{
+        width:7vmin;
+        height:5vmin;
+        position:absolute;
+        background-color:#000;
+        bottom:0;
+        right:0.5vmin;
+        left:0;
+        border-top-left-radius: 30%;
+       border-top-right-radius: 30%;
+
+    }
+    .f-1{
+        height:5vmin;
+        width:2.5vmin;
+        background-color:black;
+        top:4vmin;
+        position:absolute;
+        border-radius:30%;
+
+    }
+    .f-2{
+        height:7vmin;
+        width:2.5vmin;
+        background-color:black;
+        top:4vmin;
+        position:absolute;
+        border-radius:30%;
+        left:2.2vmin;
+
+    }
+    .f-3{
+        height:5vmin;
+        width:2.5vmin;
+        background-color:black;
+        top:4vmin;
+        position:absolute;
+        border-radius:30%;
+        right:0vmin;
+
+    }
+
+</style>
+
+</html>
