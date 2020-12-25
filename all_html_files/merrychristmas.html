@@ -1,19 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MerryChristmas</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Title</title>
 </head>
+
 <body>
 
-    <section>
-        <div class="box">
-            <div class="circle">
+    <div class="container-fluid d-flex justify-content-center align-items-center">
+
+
+        <!-- <div class="box mx-auto col-10">
+            <div class="circle mx-auto ">
                 <h2>Merry<br>Christmas</h2>
             </div>
+        </div> -->
+         
+
+        <div class="row">
+
+      
+
+            <section>
+              
+            
+
+            <div class="col-12 mx-auto">
+                <div class="row mx-auto">
+
+                    <div class="col-12 mx-auto">
+                        <div class="book-page">
+
+                            <div class="page-img">
+                                <img src="https://images.unsplash.com/photo-1548048026-5a1a941d93d3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8bGlicmFyeXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
+                                    alt="">
+
+                            </div>
+
+                            <div class="details">
+
+
+                              
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+
+</section>
+
+
+
+
+
 
 
     <script>
@@ -23,17 +77,17 @@
             var count = 200;
             var section = document.querySelector('section');
             var i = 0;
-            while(i < count){
+            while (i < count) {
                 var bubble = document.createElement('i');
                 var x = Math.floor(Math.random() * window.innerWidth);
                 var y = Math.floor(Math.random() * window.innerHeight);
                 var size = Math.random() * 10;
-                
+
                 bubble.style.left = x + 'px';
                 bubble.style.top = y + 'px';
-                bubble.style.width = 1* size + 'px';
-                bubble.style.height = 1* size + 'px';
-                bubble.style.animationDuration = .5* size + 's';
+                bubble.style.width = 1 * size + 'px';
+                bubble.style.height = 1 * size + 'px';
+                bubble.style.animationDuration = .5 * size + 's';
                 bubble.style.animationDelay = -size + 's'
 
                 section.appendChild(bubble);
@@ -47,112 +101,185 @@
         }
         bubbles();
     </script>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
 </body>
 
-<style>
 
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
         font-family: 'Satisfy', cursive;
 
     }
 
-    body{
+    body {
+        overflow: hidden !important;
+
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background: #f1f1ff;
         overflow:hidden;
     }
 
-    section{
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        height:100vh;
-        background: #f1f1ff;
+    section .box {
+        position: absolute;
+        width: 100vw;
+        height: 100vw;
+        left: 30%;
     }
 
-    section .box{
-        position:absolute;
-        width:450px;
-        height:450px;
-    }
-
-    section .box::before{
-        content:'';
-        position:absolute;
-        top:0;
-        left:50%;
-        width:100%;
-        height:100%;
-        background:linear-gradient(to right, #000, transparent);
-        transform:rotate(45deg);
-        transform-origin:left;
-        opacity:0.1;
+    section .box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, #000, transparent);
+        transform: rotate(45deg);
+        transform-origin: left;
+        opacity: 0.1;
 
     }
 
-    section .box .circle{
-        position:relative;
-        width:100%;
-        height:100%;
-        background:linear-gradient(135deg, #fff, #e4e3e8);
-        display:flex;
+    section .box .circle {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #fff, #e4e3e8);
+        display: flex;
         justify-content: center;
-        align-items:center;
-        border-radius:50%;
-        z-index:1;
-    }
-
-    section .box .circle{
-
-        content:'';
-        position:absolute;
-        margin:5px 5px 5px 5px;
-        background:linear-gradient(135deg, #fff, #e4e3e8);
-        border-radius:50%;
-
+        align-items: center;
+        border-radius: 50%;
+        z-index: 1;
 
     }
 
-    section .box .circle h2{
-        position:absolute;
+    section .box .circle::after {
+
+        content: '';
+        position: absolute;
+        margin: 5px 5px 5px 5px;
+        background: linear-gradient(135deg, #fff, #e4e3e8);
+        border-radius: 50%;
+
+
+    }
+
+    section .box .circle h2 {
+        position: absolute;
         z-index: 2;
-        font-size:4em;
-        color:#ff2a2a;
+        font-size: 4em;
+        color: #ff2a2a;
+        font-weight: 700;
     }
 
     section i {
-        position:absolute;
-        background:#ff2a2a;
-        border-radius:50%;
-        animation:animate 5s linear infinite;
+        position: absolute;
+        background: #ff2a2a;
+        border-radius: 50%;
+        animation: animate 5s linear infinite;
     }
 
-    section i:nth-child(even){
-        background:transparent;
-        border:1px solid #ff2a2a;
+    section i:nth-child(even) {
+        background: transparent;
+        border: 1px solid #ff2a2a;
     }
 
-@keyframes animate{
-    0%{
-        opacity:0;
-        transform:translateY(0);
+    .book-page {
+        width: 80vmin;
+        height: 80vmin;
+        position: absolute;
+        transform-style: preserve-3d;
+        transform: perspective(2000px);
+        box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5) 0 20px 100px rgba(0, 0, 0, 0.5);
+        background: #fff;
+        transition: 2s;
+        box-shadow: 10px 10px 10px;
+        border-radius: 12px;
+        left:-130px;
+        top:180px;
+
+
+
+
     }
 
-    10%{
-        opacity:0.5;
-        
+    .book-page:hover {
+        transform: translate(10%, 10%) perspective(2000px) rotate(90deg);
+        box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5) 0 10px 100px rgba(0, 0, 0, 0.5);
+
+
+
     }
 
-    40%{
-        opacity:1;
-       
+    .page-img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-origin: left;
+        transition: 2s;
+        z-index: 1;
+        border-radius: 12px;
     }
-    90%{
-        transform:translateY(-2000%);
+
+    .page-img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
     }
-}
+
+    .book-page:hover .page-img {
+        transform: rotateY(-135deg);
+    }
+
+    .details {
+        position: absolute;
+        top: 0vmin;
+        margin: 5px;
+        padding: 5px;
+
+
+    }
+
+    .details .row p {
+        font-size: xx-small;
+    }
+
+    @keyframes animate {
+        0% {
+            opacity: 0;
+            transform: translateY(0);
+        }
+
+        10% {
+            opacity: 0.5;
+
+        }
+
+        40% {
+            opacity: 1;
+
+        }
+
+        90% {
+            transform: translateY(-2000%);
+        }
+    }
 </style>
+
 </html>

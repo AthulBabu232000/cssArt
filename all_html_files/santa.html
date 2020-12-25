@@ -11,36 +11,74 @@
 
         <div class="beard"></div>
         <div class="head r"></div>
+        <div class="mustache">
+
+        </div>
     </div>
     
 </body>
 
 <style>
+
     .cartoon{
         position:relative;
-        top:50%;
+        top:300px;
         left:50%;
-        
-
+        transform:translate(-50%, -50%);
+        width:80vmin;
+        height:80vmin;
+        background:black;
     }
-    .head{
-        width:75px;
-        height:75px;
-        background:#fca;
-        border-radius:50%;
-        transform:translate(50%, 50%);
-        position:absolute;
 
+    .head{
+        position:absolute;
+        width:25%;
+        height:25%;
+        background:#fca;
+        top:15%;
+        left:50%;
+        transform:translate(-50%, 0%);
+        border-radius:50%;
     }
     .beard{
-        width:75px;
-        height:125px;
-        background-color:black;
+        width:28%;
         position:absolute;
-        border-radius:50%;
-        left:35px;
-        top:55px;
+        height:38%;
+        background:rgba(255, 255, 255, 0.89);
+        border-radius:100%/120% 120% 80% 80%;
+        left:36%;
+        top:15%;
+
 
     }
+  
+  .mustache{
+
+      width:10%;
+      position:absolute;
+      height:10%;
+      background:#f005;
+      border-radius: 20% 100% 0 100%;
+      top:30%;
+      transform:rotate(-55deg);
+      left:30vmin;
+      background:white;
+
+
+
+
+  }
+  .mustache::before{
+      content:'';
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:#f005;
+      border-radius: 20% 100% 0 100%;
+      left:300px;
+      top:300px;
+      transform:rotate(55deg);
+
+  }
 </style>
 </html>
