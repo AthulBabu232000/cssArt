@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>angrybird</title>
+</head>
+
+<body>
+  <div class="bird">
+    <div class="tail-middle"></div>
+    <div class="tail-top"></div>
+    <div class="tail-bottom"></div>
+    <div class="hair"></div>
+    <div class="hair-2"></div>
+    <div class="head">
+      <div class="eyebrow-left"></div>
+      <div class="eyebrow-right"></div>
+      <div class="eye-left">
+        <div class="ball"></div>
+      </div>
+      <div class="eye-right">
+        <eye class="ball"></eye>
+      </div>
+      <div class="beak"></div>
+    </div>
+  </div>
+  <script>
+
+    var balls = document.getElementsByClassName('ball');
+    var bird = document.getElementsByClassName('bird')[0];
+    bird.onmousemove = function(){
+      var x = event.clientx = 100 / window.innerwidth + '%';
+      var y = event.clienty = 100 / window.innerheight + '%';
+
+      for (let i = 0; i < 2; i++) {
+
+        balls[i].style.left = x;
+      }
+
+    }
+  </script>
+</body>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #d70029;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .bird {
+    background: white;
+    height: 80vmin;
+    width: 95vmin;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -5;
+    border: 5px solid #fbbb18;
+  }
+
+  .hair {
+    height: 20vmin;
+    width: 10vmin;
+    position: absolute;
+    background: #d70029;
+    top: -2vmin;
+    border-radius: 50% 50% 49% 51% / 51% 49% 51% 49%;
+    transform: rotate(-70deg);
+    left: 32vmin;
+    border: 3px solid black;
+  }
+
+  .hair-2 {
+    height: 20vmin;
+    width: 10vmin;
+    position: absolute;
+    background: #d70029;
+    top: -2vmin;
+    border-radius: 50% 50% 49% 51% / 51% 49% 51% 49%;
+    transform: rotate(-45deg);
+    left: 42vmin;
+    border: 3px solid black;
+    z-index: -2;
+  }
+
+  .head {
+    background: #d70029;
+    height: 65vmin;
+    width: 65vmin;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid black;
+  }
+
+  .head::after {
+    content: "";
+    position: absolute;
+    height: 50vmin;
+    width: 50vmin;
+    background-color: #e3c5aa;
+    border-radius: 50%;
+    bottom: -30%;
+    top: 36vmin;
+    right: 7vmin;
+  }
+
+  .eyebrow-left {
+    height: 7vmin;
+    width: 20vmin;
+    background: black;
+    position: absolute;
+    left: 12.5vmin;
+    top: 12vmin;
+    transform: rotate(8deg);
+    z-index: 2;
+  }
+
+  .eyebrow-right {
+    height: 7vmin;
+    width: 20vmin;
+    background: black;
+    position: absolute;
+    right: 12.5vmin;
+    top: 12vmin;
+    transform: rotate(-8deg);
+    z-index: 2;
+  }
+
+  .eye-left {
+    height: 18vmin;
+    width: 19vmin;
+    background: white;
+    position: absolute;
+    left: 14.5vmin;
+    top: 14vmin;
+    border-radius: 50%;
+    border: 2px solid black;
+    z-index: 1;
+    box-shadow: -5px 5px 15px;
+  }
+
+  .ball {
+    position: absolute;
+    height: 6vmin;
+    width: 6vmin;
+    background: black;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+  .ball::before {
+    content: "";
+    position: absolute;
+    height: 1.5vmin;
+    width: 1.5vmin;
+    background: white;
+    z-index: 7;
+    border-radius: 50%;
+    left: 4vmin;
+    top: 1.5vmin;
+  }
+
+  .eye-right {
+    height: 18vmin;
+    width: 19vmin;
+    background: white;
+    position: absolute;
+    right: 15.5vmin;
+    top: 14vmin;
+    border-radius: 50%;
+    border: 2px solid black;
+    box-shadow: 5px 5px 15px;
+  }
+
+
+
+  .tail-middle,
+  .tail-top,
+  .tail-bottom {
+    height: 7vmin;
+    width: 20vmin;
+    background: black;
+    clip-path: polygon(0 0, 100% 31%, 100% 78%, 0 100%);
+  }
+
+  .tail-top {
+    transform: rotate(35deg);
+    left: 7vmin;
+    position: absolute;
+    top: 33vmin;
+  }
+
+  .tail-middle {
+    position: absolute;
+    top: 35vmin;
+    left: 2vmin;
+  }
+
+  .tail-bottom {
+    position: absolute;
+    bottom: 35vmin;
+    left: 7vmin;
+    transform: rotate(-35deg);
+  }
+
+  .beak {
+    height: 18vmin;
+    width: 18vmin;
+    background: #fbbb18;
+    top: 29vmin;
+    left: 23vmin;
+    position: absolute;
+    transform: rotate(45deg);
+    z-index: 10;
+    border: 2px solid black;
+    border-radius: 25px 0 0 0;
+  }
+
+  .beak::before {
+    content: "";
+    position: absolute;
+    width: 24.5vmin;
+    border: 1px solid black;
+    transform: rotate(-45deg);
+    top: 9vmin;
+    left: -3.5vmin;
+  }
+</style>
+
+
+</html>
